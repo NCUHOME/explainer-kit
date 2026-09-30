@@ -101,3 +101,5 @@ tools/render.sh <id> "<完整标题>"
 - 改字幕/配音文字：改 `narration.json` → `tools/audio.sh <id> <镜头id>` → 检查 → 重新导出。
 - 改品牌：只改 `video/public/brand/brand.json`，所有集同时生效。
 - 用户的新意见如果是通用的，追加到 `references/LESSONS.md`。
+- 用户要“预览”：在 `video/` 里运行 `npx remotion studio`（长时间运行，放后台），把网址告诉用户；有内置浏览器就直接打开 `/EP-<id>`。
+- 用户说“继续上次的”：先看 `video/src/episodes/<id>/` 里有哪些文件、`timeline.json` 是否存在、`out/` 里有没有成片，判断做到哪一步再接着做。
