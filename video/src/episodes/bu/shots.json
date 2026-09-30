@@ -1,0 +1,19 @@
+[
+  { "id": "b01", "min": 6.4, "hold": 0.6, "section": "tense-intro" },
+  { "id": "b02", "min": 7.5, "hold": 1.0, "section": "cover" },
+  { "id": "b03", "min": 4.2, "section": "chapter" },
+  { "id": "b04", "hold": 1.4, "section": "qa" },
+  { "id": "b05", "hold": 1.4, "section": "qa" },
+  { "id": "b06", "min": 4.2, "section": "chapter" },
+  { "id": "b07", "hold": 1.4, "section": "qa" },
+  { "id": "b08", "hold": 1.2, "section": "qa" },
+  { "id": "b09", "min": 4.2, "section": "chapter" },
+  { "id": "b10", "hold": 1.4, "section": "qa" },
+  { "id": "b11", "min": 6.4, "hold": 1.0, "section": "qa" },
+  { "id": "b12", "hold": 1.4, "section": "qa" },
+  { "id": "b13", "min": 4.2, "section": "chapter" },
+  { "id": "b14", "hold": 1.4, "section": "tense" },
+  { "id": "b15", "hold": 1.6, "section": "calm" },
+  { "id": "b16", "hold": 1.8, "section": "finale" },
+  { "id": "b17", "min": 6.4, "section": "end" }
+]

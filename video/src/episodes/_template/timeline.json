@@ -1,0 +1,63 @@
+{
+ "bpm": 112,
+ "fps": 30,
+ "beatSeconds": 0.5357142857142857,
+ "totalBeats": 80,
+ "totalFrames": 1286,
+ "shots": [
+  {
+   "id": "x01",
+   "section": "tense-intro",
+   "startBeat": 0,
+   "beats": 12,
+   "from": 0,
+   "frames": 193,
+   "voiceFrom": 16
+  },
+  {
+   "id": "x02",
+   "section": "cover",
+   "startBeat": 12,
+   "beats": 14,
+   "from": 193,
+   "frames": 225,
+   "voiceFrom": 16
+  },
+  {
+   "id": "x03",
+   "section": "chapter",
+   "startBeat": 26,
+   "beats": 8,
+   "from": 418,
+   "frames": 128,
+   "voiceFrom": 16
+  },
+  {
+   "id": "x04",
+   "section": "qa",
+   "startBeat": 34,
+   "beats": 18,
+   "from": 546,
+   "frames": 290,
+   "voiceFrom": 16
+  },
+  {
+   "id": "x05",
+   "section": "finale",
+   "startBeat": 52,
+   "beats": 16,
+   "from": 836,
+   "frames": 257,
+   "voiceFrom": 16
+  },
+  {
+   "id": "x06",
+   "section": "end",
+   "startBeat": 68,
+   "beats": 12,
+   "from": 1093,
+   "frames": 193,
+   "voiceFrom": null
+  }
+ ]
+}

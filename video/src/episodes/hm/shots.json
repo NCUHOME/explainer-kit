@@ -1,0 +1,15 @@
+[
+  { "id": "c01", "min": 6.4, "hold": 0.8, "section": "calm" },
+  { "id": "c02", "min": 7.5, "hold": 1.0, "section": "cover" },
+  { "id": "c03", "min": 4.2, "section": "chapter" },
+  { "id": "c04", "hold": 1.6, "section": "qa" },
+  { "id": "c05", "hold": 1.4, "section": "qa" },
+  { "id": "c06", "min": 4.2, "section": "chapter" },
+  { "id": "c07", "hold": 1.6, "section": "qa" },
+  { "id": "c08", "hold": 1.4, "section": "qa" },
+  { "id": "c09", "min": 4.2, "section": "chapter" },
+  { "id": "c10", "hold": 1.6, "section": "calm" },
+  { "id": "c11", "hold": 1.4, "section": "qa" },
+  { "id": "c12", "hold": 1.8, "section": "finale" },
+  { "id": "c13", "min": 6.4, "section": "end" }
+]

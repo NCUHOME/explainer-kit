@@ -1,0 +1,8 @@
+node_modules/
+.venv/
+out/
+video/public/voice/_template/
+video/public/music/*.wav
+video/public/music/_template_score.mp3
+*.tmp.mp4
+.DS_Store

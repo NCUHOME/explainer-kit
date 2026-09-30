@@ -1,0 +1,126 @@
+{
+ "bpm": 112,
+ "fps": 30,
+ "beatSeconds": 0.5357142857142857,
+ "totalBeats": 254,
+ "totalFrames": 4082,
+ "shots": [
+  {
+   "id": "c01",
+   "section": "calm",
+   "startBeat": 0,
+   "beats": 14,
+   "from": 0,
+   "frames": 225,
+   "voiceFrom": 16
+  },
+  {
+   "id": "c02",
+   "section": "cover",
+   "startBeat": 14,
+   "beats": 14,
+   "from": 225,
+   "frames": 225,
+   "voiceFrom": 16
+  },
+  {
+   "id": "c03",
+   "section": "chapter",
+   "startBeat": 28,
+   "beats": 8,
+   "from": 450,
+   "frames": 129,
+   "voiceFrom": 16
+  },
+  {
+   "id": "c04",
+   "section": "qa",
+   "startBeat": 36,
+   "beats": 30,
+   "from": 579,
+   "frames": 482,
+   "voiceFrom": 16
+  },
+  {
+   "id": "c05",
+   "section": "qa",
+   "startBeat": 66,
+   "beats": 22,
+   "from": 1061,
+   "frames": 353,
+   "voiceFrom": 16
+  },
+  {
+   "id": "c06",
+   "section": "chapter",
+   "startBeat": 88,
+   "beats": 8,
+   "from": 1414,
+   "frames": 129,
+   "voiceFrom": 16
+  },
+  {
+   "id": "c07",
+   "section": "qa",
+   "startBeat": 96,
+   "beats": 30,
+   "from": 1543,
+   "frames": 482,
+   "voiceFrom": 16
+  },
+  {
+   "id": "c08",
+   "section": "qa",
+   "startBeat": 126,
+   "beats": 26,
+   "from": 2025,
+   "frames": 418,
+   "voiceFrom": 16
+  },
+  {
+   "id": "c09",
+   "section": "chapter",
+   "startBeat": 152,
+   "beats": 8,
+   "from": 2443,
+   "frames": 128,
+   "voiceFrom": 16
+  },
+  {
+   "id": "c10",
+   "section": "calm",
+   "startBeat": 160,
+   "beats": 30,
+   "from": 2571,
+   "frames": 483,
+   "voiceFrom": 17
+  },
+  {
+   "id": "c11",
+   "section": "qa",
+   "startBeat": 190,
+   "beats": 22,
+   "from": 3054,
+   "frames": 353,
+   "voiceFrom": 16
+  },
+  {
+   "id": "c12",
+   "section": "finale",
+   "startBeat": 212,
+   "beats": 30,
+   "from": 3407,
+   "frames": 482,
+   "voiceFrom": 16
+  },
+  {
+   "id": "c13",
+   "section": "end",
+   "startBeat": 242,
+   "beats": 12,
+   "from": 3889,
+   "frames": 193,
+   "voiceFrom": null
+  }
+ ]
+}

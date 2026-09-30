@@ -1,0 +1,162 @@
+{
+ "bpm": 112,
+ "fps": 30,
+ "beatSeconds": 0.5357142857142857,
+ "totalBeats": 316,
+ "totalFrames": 5079,
+ "shots": [
+  {
+   "id": "b01",
+   "section": "tense-intro",
+   "startBeat": 0,
+   "beats": 12,
+   "from": 0,
+   "frames": 193,
+   "voiceFrom": 16
+  },
+  {
+   "id": "b02",
+   "section": "cover",
+   "startBeat": 12,
+   "beats": 14,
+   "from": 193,
+   "frames": 225,
+   "voiceFrom": 16
+  },
+  {
+   "id": "b03",
+   "section": "chapter",
+   "startBeat": 26,
+   "beats": 8,
+   "from": 418,
+   "frames": 128,
+   "voiceFrom": 16
+  },
+  {
+   "id": "b04",
+   "section": "qa",
+   "startBeat": 34,
+   "beats": 20,
+   "from": 546,
+   "frames": 322,
+   "voiceFrom": 16
+  },
+  {
+   "id": "b05",
+   "section": "qa",
+   "startBeat": 54,
+   "beats": 24,
+   "from": 868,
+   "frames": 386,
+   "voiceFrom": 16
+  },
+  {
+   "id": "b06",
+   "section": "chapter",
+   "startBeat": 78,
+   "beats": 8,
+   "from": 1254,
+   "frames": 128,
+   "voiceFrom": 16
+  },
+  {
+   "id": "b07",
+   "section": "qa",
+   "startBeat": 86,
+   "beats": 28,
+   "from": 1382,
+   "frames": 450,
+   "voiceFrom": 16
+  },
+  {
+   "id": "b08",
+   "section": "qa",
+   "startBeat": 114,
+   "beats": 16,
+   "from": 1832,
+   "frames": 257,
+   "voiceFrom": 16
+  },
+  {
+   "id": "b09",
+   "section": "chapter",
+   "startBeat": 130,
+   "beats": 8,
+   "from": 2089,
+   "frames": 129,
+   "voiceFrom": 16
+  },
+  {
+   "id": "b10",
+   "section": "qa",
+   "startBeat": 138,
+   "beats": 28,
+   "from": 2218,
+   "frames": 450,
+   "voiceFrom": 16
+  },
+  {
+   "id": "b11",
+   "section": "qa",
+   "startBeat": 166,
+   "beats": 14,
+   "from": 2668,
+   "frames": 225,
+   "voiceFrom": 16
+  },
+  {
+   "id": "b12",
+   "section": "qa",
+   "startBeat": 180,
+   "beats": 18,
+   "from": 2893,
+   "frames": 289,
+   "voiceFrom": 16
+  },
+  {
+   "id": "b13",
+   "section": "chapter",
+   "startBeat": 198,
+   "beats": 8,
+   "from": 3182,
+   "frames": 129,
+   "voiceFrom": 16
+  },
+  {
+   "id": "b14",
+   "section": "tense",
+   "startBeat": 206,
+   "beats": 20,
+   "from": 3311,
+   "frames": 321,
+   "voiceFrom": 16
+  },
+  {
+   "id": "b15",
+   "section": "calm",
+   "startBeat": 226,
+   "beats": 44,
+   "from": 3632,
+   "frames": 707,
+   "voiceFrom": 16
+  },
+  {
+   "id": "b16",
+   "section": "finale",
+   "startBeat": 270,
+   "beats": 34,
+   "from": 4339,
+   "frames": 547,
+   "voiceFrom": 16
+  },
+  {
+   "id": "b17",
+   "section": "end",
+   "startBeat": 304,
+   "beats": 12,
+   "from": 4886,
+   "frames": 193,
+   "voiceFrom": null
+  }
+ ]
+}

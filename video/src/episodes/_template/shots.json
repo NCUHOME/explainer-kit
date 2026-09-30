@@ -1,0 +1,8 @@
+[
+  { "id": "x01", "min": 5.4, "hold": 0.6, "section": "tense-intro" },
+  { "id": "x02", "min": 7.5, "hold": 1.0, "section": "cover" },
+  { "id": "x03", "min": 4.2, "section": "chapter" },
+  { "id": "x04", "hold": 1.4, "section": "qa" },
+  { "id": "x05", "hold": 1.6, "section": "finale" },
+  { "id": "x06", "min": 6.4, "section": "end" }
+]
