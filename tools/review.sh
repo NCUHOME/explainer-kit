@@ -5,6 +5,7 @@ set -e
 setopt null_glob
 cd "$(dirname "$0")/.."
 ep="$1"; D="out/review/$ep"; mkdir -p "$D"; rm -f "$D"/f_*.jpg "$D"/sheet_*.jpg
+python3 tools/brand.py for "$ep"
 (cd video && npx remotion render "EP-$ep" "../$D/draft.mp4" --scale=0.5 --crf=23 --log=error)
 frames=$(python3 -c "
 import json; t=json.load(open('video/src/episodes/$ep/timeline.json'))

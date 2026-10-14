@@ -8,5 +8,6 @@
 | edge-tts | 调用微软在线语音合成 | GPL-3.0（工具本身）；语音服务条款以微软为准 |
 | 配乐与音效 | `tools/score.py` 用代码合成 | 本套件原创，无第三方音频 |
 | 风格方法参考 | lemo-opuscar（Pictogram Motion、Mid-century Cartoon 两种风格的语法与导演方法） | MIT；只学习语法，未复制其画面、角色或代码 |
-| 南昌大学标志（video/public/brand/） | 示例品牌 | 版权归南昌大学所有，仅限按学校视觉规范使用 |
+| 南昌大学标志（brands/ncu-jwc/） | 品牌库 ncu-jwc | 版权归南昌大学所有，仅限按学校视觉规范使用 |
+| 其他单位的标志（brands/<品牌名>/） | 品牌库 | 版权归各单位所有，见各自 brand.json 的 rights |
 | 步道乐跑 APP 截图 | 示例素材（如有） | 版权归原 APP 所有 |

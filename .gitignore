@@ -6,3 +6,5 @@ video/public/music/*.wav
 video/public/music/_template_score.mp3
 *.tmp.mp4
 .DS_Store
+# 当前品牌由 tools/brand.py 从 brands/<品牌名>/ 复制过来
+video/public/brand/
