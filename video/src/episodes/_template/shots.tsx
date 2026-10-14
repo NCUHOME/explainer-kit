@@ -7,7 +7,7 @@ import { Answer, ChapterCard, CoverCard, EndCard, QHeader, Room } from "../../pi
 import { CREAM, FONT_CN, FONT_LATIN, HUES, INK, NEUTRAL } from "../../picto/palette";
 import { beat, cue } from "./tl";
 
-// TEMPLATE — replace every shot with your own. Rules: .claude/skills/explainer-video/references/STYLE.md + .claude/skills/explainer-video/SKILL.md.
+// TEMPLATE — replace every shot with your own. Rules: docs/STYLE.md + the explainer-video skill (NCUHOME/ops-skills).
 // cue(id, phrase) = frame where the phrase is spoken; beat(id, n) = frame n beats into the shot.
 
 const blue = HUES.blue;

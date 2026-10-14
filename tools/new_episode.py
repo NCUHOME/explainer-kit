@@ -1,8 +1,9 @@
 """Scaffold a new episode from the template and register it.
 
 Usage: .venv/bin/python tools/new_episode.py <id> --episode 第八期 --tag 补测篇 \
-         --subtitle "南昌大学《学生体质健康标准》Q&A" --title "教务答疑直通车｜第八期：…"
+         --subtitle "南昌大学《学生体质健康标准》Q&A" --title "教务答疑直通车｜第八期：…" --brand ncu-jwc
 <id>: short latin name, e.g. "bk". Composition id becomes EP-<id>.
+--brand: a folder name under brands/ (tools/brand.py list); saved in the episode's episode.json.
 """
 import argparse
 import json
@@ -18,7 +19,10 @@ ap.add_argument("--episode", required=True)
 ap.add_argument("--tag", required=True)
 ap.add_argument("--subtitle", default="")
 ap.add_argument("--title", default="")
+ap.add_argument("--brand", default="ncu-jwc")
 a = ap.parse_args()
+if not (Path(__file__).resolve().parent.parent / "brands" / a.brand / "brand.json").is_file():
+    raise SystemExit(f"brand '{a.brand}' not found under brands/ (see tools/brand.py list)")
 if not re.fullmatch(r"[a-z][a-z0-9]*", a.id):
     raise SystemExit("id must be lowercase latin letters/digits, e.g. bk")
 dst = ROOT / a.id
@@ -32,6 +36,8 @@ for f in dst.iterdir():
         for k, v in subs.items():
             s = s.replace(k, v)
         f.write_text(s, "utf-8")
+meta = {"brand": a.brand, "episode": a.episode, "tag": a.tag, "title": a.title}
+(dst / "episode.json").write_text(json.dumps(meta, ensure_ascii=False, indent=2) + "\n", "utf-8")
 # point the template's voice manifest at this episode's audio folder
 vj = dst / "voice.json"
 v = json.loads(vj.read_text("utf-8"))

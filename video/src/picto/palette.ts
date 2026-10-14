@@ -1,11 +1,11 @@
-// Palette from .claude/skills/explainer-video/references/STYLE.md §2: four hues × five tones (darkest → lightest,
+// Palette from docs/STYLE.md §2: four hues × five tones (darkest → lightest,
 // index 2 is the base), one dark neutral, one cream, one ink.
 export type Hue = readonly [string, string, string, string, string];
 
 import { BRAND } from "../brand";
 
 export const HUES = {
-  // "blue" is the brand hue (public/brand/brand.json → primary)
+  // "blue" is the brand hue (brands/<id>/brand.json → primary)
   blue: BRAND.primary,
   red: ["#7A2820", "#B23A2F", "#D4483B", "#EC9A8F", "#F8D8D2"],
   green: ["#1D5236", "#2C7A4E", "#3F9A66", "#98CFAB", "#DAEFE1"],

@@ -3,7 +3,7 @@ import { Img, staticFile } from "remotion";
 import { BRAND } from "../brand";
 import { CREAM } from "./palette";
 
-// Brand anchor: constant on every frame (STYLE.md §2). Configured in public/brand/brand.json.
+// Brand anchor: constant on every frame (STYLE.md §2). Configured in brands/<id>/brand.json (tools/brand.py).
 export const NCU_BLUE = BRAND.primary[1];
 const SERIF = "Noto Serif SC";
 

@@ -4,6 +4,7 @@
 set -e
 cd "$(dirname "$0")/.."
 ep="$1"; name="$2"; mkdir -p out
+python3 tools/brand.py for "$ep"
 (cd video && npx remotion render "EP-$ep" "../out/$name.mp4" --log=error)
 tools/finalize.sh "out/$name.mp4"
 .venv/bin/python tools/srt.py "$ep" "out/$name.srt"

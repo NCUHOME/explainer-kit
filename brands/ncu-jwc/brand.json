@@ -1,0 +1,21 @@
+{
+  "order": 1,
+  "name": "南昌大学教务处 · 教务答疑直通车",
+  "description": "南大蓝五阶色、官方组合标志、片尾免责声明，用于教务处政策问答视频",
+  "rights": "南昌大学标志版权归南昌大学所有，仅限按学校视觉规范使用",
+  "org": "南昌大学",
+  "orgEn": "NANCHANG UNIVERSITY",
+  "dept": "教务处",
+  "deptEn": "Academic Affairs Office",
+  "series": "教务答疑直通车",
+  "lockupColor": "lockup_color.png",
+  "lockupWhite": "lockup_white.png",
+  "primary": [
+    "#1B3F8F",
+    "#2658C4",
+    "#4F80DE",
+    "#A3BDEE",
+    "#E0E9FA"
+  ],
+  "disclaimer": "以上内容为科普介绍，具体安排以正式通知为准，动画短片不作为正式官方文件。"
+}

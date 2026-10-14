@@ -4,7 +4,7 @@
 
 用它做出的成片：「教务答疑直通车」第六期《学生体质健康标准》Q&A（补测篇）、第七期（缓免测篇）。这两期的全部源码在 `video/src/episodes/bu/` 和 `hm/`，可以直接打开看、改、重新导出。
 
-> 你不需要会写代码。你要做的是：**准备好材料 → 用下面的提示词告诉 Claude 做什么 → 看成片、提意见**。写代码、配音、配乐、导出都由 Claude 按内置的 skill（`.claude/skills/explainer-video/`）完成。
+> 你不需要会写代码。你要做的是：**准备好材料 → 用下面的提示词告诉 Claude 做什么 → 看成片、提意见**。写代码、配音、配乐、导出，都由 Claude 按运营组 skill `explainer-video` 完成（[NCUHOME/ops-skills](https://github.com/NCUHOME/ops-skills)）。
 
 ---
 
@@ -19,10 +19,15 @@
 | pandoc（可选） | 读取 Word 文档 | macOS：`brew install pandoc` |
 
 ```bash
+npx skills add NCUHOME/ops-skills -a claude-code -g   # 装运营组 skill（做视频 + 排推文）
+claude                                                # 在任意文件夹打开 Claude Code，说「做视频」
+```
+
+第一次做视频时，Claude 会自动把本仓库下载到 `~/explainer-kit`，并运行 `./setup.sh`（约 2 分钟）。想自己放在别的位置也可以：
+
+```bash
 git clone https://github.com/NCUHOME/explainer-kit.git
-cd explainer-kit
-./setup.sh        # 约 2 分钟，装好会提示“完成”
-claude            # 在这个文件夹里打开 Claude Code
+cd explainer-kit && ./setup.sh && claude
 ```
 
 > Windows 同学：脚本按 macOS / Linux 写，请在 WSL 里使用。
@@ -111,6 +116,8 @@ claude            # 在这个文件夹里打开 Claude Code
 继续做第八期。先看一下 video/src/episodes/ 里这一期做到哪了，从没完成的地方接着做。
 ```
 
+> 也可以只说「做视频」或输入 `/explainer-video`，Claude 会先出一道选择题（做新一期 / 改已有一期 / 继续上次 / 只重新导出 / 新建品牌），再告诉你要准备哪些材料。
+
 ---
 
 ## 四、一期视频是怎么做出来的
@@ -135,18 +142,32 @@ claude            # 在这个文件夹里打开 Claude Code
 
 ---
 
-## 五、换单位 / 换栏目
+## 五、品牌库（换单位 / 换栏目）
 
-所有品牌设置都在一个文件夹：`video/public/brand/`
+每个单位或栏目的品牌，都是 `brands/` 下的一个文件夹，例如 `brands/ncu-jwc/`（南昌大学教务处 · 教务答疑直通车）：
 
-- `brand.json`：单位名（org）、部门（dept）及英文名、栏目名（series）、品牌色（primary，五个色阶，深→浅）、片尾免责声明（disclaimer）
-- 官方组合标志两张：浅色底用（lockupColor）、深色底用的反白版（lockupWhite）。没有图片就把这两项留空，会自动用文字排版
+- `brand.json` 里写这些：
+  - 品牌库用的信息：编号（order）、名称（name）、一句话说明（description）、标志版权说明（rights）；
+  - 单位名（org）、部门（dept）及各自的英文名、栏目名（series）；
+  - 品牌色（primary）：五个色阶，深 → 浅；
+  - 片尾免责声明（disclaimer）。
+- 官方组合标志两张：浅色底用的（lockupColor），深色底用的反白版（lockupWhite）。没有图片就把这两项留空，会自动用文字排版代替。
 
-也可以直接告诉 Claude：
+每期用哪个品牌，写在 `video/src/episodes/<期>/episode.json` 里。试渲染和导出时会自动切换，不用手动改。
+
+```bash
+python3 tools/brand.py list                  # 看品牌库
+python3 tools/brand.py gallery               # 生成「品牌一览」网页
+python3 tools/brand.py check                 # 检查品牌库
+```
+
+要给新单位做视频，直接告诉 Claude：
 
 ```text
-这次是学生处的栏目「学生事务小课堂」，标志在【/路径/logo.png】，主色用紫色，帮我改好品牌设置。
+这次是学生处的栏目「学生事务小课堂」，标志在【/路径/logo.png】，主色用紫色，帮我建一个新品牌。
 ```
+
+做好的新品牌，Claude 会问要不要存进品牌库。同意后它会提 PR，由维护人审核合并，之后大家都能选。
 
 ---
 
@@ -167,7 +188,7 @@ claude            # 在这个文件夹里打开 Claude Code
 ## 七、注意事项
 
 - **内容准确第一**：视频代表教务处发布，事实要和正式文件一致；片尾会自动加免责声明。
-- **标志使用**：`video/public/brand/` 里的南昌大学标志，请按学校视觉规范使用。
+- **标志使用**：`brands/` 里的标志版权归各单位所有。南昌大学标志请按学校视觉规范使用。
 - **Remotion 授权**：渲染引擎 Remotion 对个人、非营利组织和 3 人以内团队免费，其他情况请看 https://www.remotion.pro/license
 - 第三方资源与许可见 `NOTICE.md`。
 
@@ -176,9 +197,9 @@ claude            # 在这个文件夹里打开 Claude Code
 ## 附：文件夹结构
 
 ```
-.claude/skills/explainer-video/   Claude 的做法：SKILL.md（流程）+ references/（视觉规范、组件目录、审片意见、检查清单）
-video/public/brand/               品牌配置和标志
-video/src/episodes/<id>/          每一期：配音稿、镜头表、画面代码（bu = 补测篇，hm = 缓免测篇）
+docs/                             视觉规范、组件目录、审片意见（硬性要求）、检查清单
+brands/<品牌名>/                   品牌库：brand.json + 标志（当前品牌会复制到 video/public/brand/，不进仓库）
+video/src/episodes/<id>/          每一期：episode.json（期数、标题、品牌）、配音稿、镜头表、画面代码（bu = 补测篇，hm = 缓免测篇）
 video/src/picto/ · video/src/kit/ 画面组件（象形小人、图案、封面、章节卡、问答头、流程节点……）
 tools/                            配音、时间轴、配乐、截帧检查、导出脚本
 out/                              导出的成片（不上传到仓库）
@@ -187,7 +208,7 @@ out/                              导出的成片（不上传到仓库）
 手动命令（一般不需要，Claude 会自己用）：
 
 ```bash
-.venv/bin/python tools/new_episode.py <id> --episode 第八期 --tag 选课篇 --subtitle "…" --title "…"
+.venv/bin/python tools/new_episode.py <id> --episode 第八期 --tag 选课篇 --subtitle "…" --title "…" --brand ncu-jwc
 tools/audio.sh <id>                  # 配音 + 节拍时间轴 + 原创配乐
 tools/review.sh <id>                 # 半分辨率试渲染 + 截帧拼图（out/review/<id>/）
 tools/render.sh <id> "<完整标题>"     # 最终导出 mp4 + srt + 压缩版

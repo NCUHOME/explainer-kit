@@ -17,7 +17,9 @@ ok "Python 依赖"
 echo "安装 Node 依赖 / npm install"
 (cd video && npm install --no-audit --no-fund --loglevel=error)
 ok "Node 依赖"
+echo "品牌 / Brand"
+[ -f video/public/brand/brand.json ] || python3 tools/brand.py use ncu-jwc
 echo "生成音效 / Generating sound effects"
 .venv/bin/python -c "import sys; sys.path.insert(0,'tools'); import score; score.gen_sfx()"
 echo
-echo "完成。下一步：在本文件夹运行 claude，然后说「用这份文档做一期视频」。"
+echo "完成。下一步：运行 claude，然后说「做视频」（需要先装运营组 skill：npx skills add NCUHOME/ops-skills -a claude-code）。"
